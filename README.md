@@ -73,6 +73,10 @@ MCP Client 是 Cline
 
 MCP Server 是 本機運行的程式
 
+如果你想加入, sse 的遠端 server, 直接將 URL 貼到 Remote Servers 即可.
+
+![alt tag](https://i.imgur.com/oYvVHfJ.png)
+
 ### 安裝 Node.js
 
 [下載 Node.js](https://nodejs.org/zh-tw/download)
@@ -91,6 +95,37 @@ nvm current # 應會印出 "v22.14.0"。
 # 核對 npm 版本：
 npm -v # 應會印出 "10.9.2"。
 ```
+
+## Claude
+
+Linux 目前只有社群維護的版本 [claude-desktop-debian](https://github.com/aaddrick/claude-desktop-debian)
+
+如果你想要用它連結你的遠端 MCP Server,
+
+請到 `~/.config/Claude/claude_desktop_config.json` 設定
+
+```json
+{
+  "mcpServers": {
+    "n8n mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "supergateway",
+        "--sse",
+        "https://xxxxxxx/mcp/xxxxxxxxx/sse"
+      ]
+    }
+  }
+}
+
+```
+
+使用的概念是 [supergateway - sse--stdio](https://github.com/supercorp-ai/supergateway?tab=readme-ov-file#sse--stdio)
+
+接著重新啟動 Claude, 如果都設定正確
+
+![alt tag](https://i.imgur.com/oX2Q8Nu.png)
 
 ## Donation
 
