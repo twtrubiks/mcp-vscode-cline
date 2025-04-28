@@ -1,4 +1,4 @@
-# 用 Cline 在 VSCode 玩轉 Model Context Protocol (MCP)  🚀
+# 用 Cline 在 VSCode or Claude 玩轉 Model Context Protocol (MCP)  🚀
 
 * [Youtube Tutorial - 用 Cline 在 VSCode 玩轉 Model Context Protocol (MCP)](https://youtu.be/t_n9xWmhEZw)
 
@@ -73,6 +73,10 @@ MCP Client 是 Cline
 
 MCP Server 是 本機運行的程式
 
+如果你想加入, sse 的遠端 server, 直接將 URL 貼到 Remote Servers 即可.
+
+![alt tag](https://i.imgur.com/oYvVHfJ.png)
+
 ### 安裝 Node.js
 
 [下載 Node.js](https://nodejs.org/zh-tw/download)
@@ -91,6 +95,53 @@ nvm current # 應會印出 "v22.14.0"。
 # 核對 npm 版本：
 npm -v # 應會印出 "10.9.2"。
 ```
+
+## Claude
+
+Linux 目前只有社群維護的版本 [claude-desktop-debian](https://github.com/aaddrick/claude-desktop-debian)
+
+如果你想要用它連結你的遠端 MCP Server,
+
+請到 `~/.config/Claude/claude_desktop_config.json` 設定
+
+```json
+{
+  "mcpServers": {
+    "n8n mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "supergateway",
+        "--sse",
+        "https://xxxxxxx/mcp/xxxxxxxxx/sse"
+      ]
+    }
+  }
+}
+
+```
+
+使用的概念是 [supergateway - sse--stdio](https://github.com/supercorp-ai/supergateway?tab=readme-ov-file#sse--stdio)
+
+接著重新啟動 Claude, 如果都設定正確
+
+![alt tag](https://i.imgur.com/oX2Q8Nu.png)
+
+## MCP Server
+
+* [PostgreSQL](https://github.com/modelcontextprotocol/servers/tree/main/src/postgres) - PostgreSQL MCP
+
+* [Filesystem MCP Server](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) - 可以讀寫本地文件
+
+* [Sequential Thinking MCP Server](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking) - 拆解問題, 分析, 推理, 思考.
+
+* [Basic Memory](https://github.com/basicmachines-co/basic-memory) - 長期記憶 (紀錄對話歷史, 會去讀取你之前問過得內容).
+
+* [Firecrawl MCP Server](https://github.com/mendableai/firecrawl-mcp-server) - 透過 Firecrawl 抓取網路上的資訊.
+
+* [Tavily MCP Server](https://github.com/tavily-ai/tavily-mcp) - 透過 Tavily api 連網搜尋.
+
+* [Playwright MCP](https://github.com/microsoft/playwright-mcp) - 呼叫瀏覽器.
 
 ## Donation
 
