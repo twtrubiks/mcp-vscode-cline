@@ -2,6 +2,8 @@
 
 * [Youtube Tutorial - 用 Cline 在 VSCode 玩轉 Model Context Protocol (MCP)](https://youtu.be/t_n9xWmhEZw)
 
+* [Youtube Tutorial - 告別手動撈資料 Claude AI MCP 自動查詢 Odoo PostgreSQL](https://youtu.be/EOZ91jD9aL8)
+
 ## MCP 到底是什麼？ 🤔
 
 MCP 的全名是 Model Context Protocol。簡單說，它就像是 AI 界的 USB Type-C 🔌 ✨
@@ -142,6 +144,72 @@ Linux 目前只有社群維護的版本 [claude-desktop-debian](https://github.c
 * [Tavily MCP Server](https://github.com/tavily-ai/tavily-mcp) - 透過 Tavily api 連網搜尋.
 
 * [Playwright MCP](https://github.com/microsoft/playwright-mcp) - 呼叫瀏覽器.
+
+* [Context7 MCP](https://github.com/upstash/context7) - 讓 AI 幫你自動閱讀文檔.
+
+### Context7
+
+* [Youtube Tutorial - 告別 AI 瞎猜！Context7 MCP + clinerules 精準生成 Odoo 18 Addon](https://youtu.be/lYtQpV3icDY)
+
+告別 AI 瞎猜！ Context7 MCP 搭配 `.clinerules` 優化 Prompt，精準生成 Odoo 18 Addon 實戰
+
+官網使用可以到 [context7](https://context7.com)
+
+Context7 MCP：為你的 AI Prompt 提供最新的程式碼文件
+
+【問題：沒有 Context7 時 ❌】
+
+大型語言模型 (LLM) 在回答程式碼相關問題時，常常依賴過時或通用的訓練資料，導致：
+
+❌ 程式碼範例過時，基於一年前的舊資料。
+❌ 產生出根本不存在的幻想 API。
+❌ 針對舊的軟體包版本，給出通用或不適用的答案。
+
+【解決方案：使用 Context7 時 ✅】
+
+Context7 MCP 能直接從原始來源抓取最新、針對特定版本的文件和程式碼範例，並將這些最新資訊直接放入你提供給 AI 的 Prompt (提示語) 的上下文中。
+
+VS Code MCP 設定 [Context7 MCP](https://github.com/upstash/context7)
+
+```json
+{
+  "servers": {
+    "Context7": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@latest"]
+    }
+  }
+}
+```
+
+使用 Cline + Odoo 18 + `gemini-2.0-flash-001` 來實戰一下,
+
+這邊除了用 Context7 之外, 還會使用 Filesystem MCP Server.
+
+直接把我們的需求全部給 Cline 不切實際, 效果也不好, 透過 `.clinerules` 來改善這個問題
+
+設定的位置在這邊
+
+![img](https://i.imgur.com/ZC7dG6b.png)
+
+範例可參考 [.clinerules](.clinerules) 資料夾底下
+
+[.clinerules/00-doc.md](.clinerules/00-doc.md) - 請它用 Context7 先閱讀文件, 避免幻覺.
+
+[.clinerules/01-logic.md](.clinerules/01-logic.md) - 定義他的邏輯.
+
+接著直接給 Cline 下 Prompt
+
+```text
+先閱讀文件 再開發 addons
+```
+
+如果在執行中, 你想要讓 Cline 自動一直執行下去, 不要每次都一直和你要求允許,
+
+點擊打勾這個圖示, 右邊的 autoApprove 就會填入對應的事件 type, 之後遇到相同的就會跳過去了
+
+![img](https://i.imgur.com/IMKyftk.png)
 
 ## Donation
 
