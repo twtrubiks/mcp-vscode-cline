@@ -4,6 +4,8 @@
 
 * [Youtube Tutorial - 告別手動撈資料 Claude AI MCP 自動查詢 Odoo PostgreSQL](https://youtu.be/EOZ91jD9aL8)
 
+* [Youtube Tutorial - 複雜爬蟲掰掰！Playwright MCP + AI 輕鬆實現 PTT 圖片自由！(等待新增)](xxx)
+
 ## MCP 到底是什麼？ 🤔
 
 MCP 的全名是 Model Context Protocol。簡單說，它就像是 AI 界的 USB Type-C 🔌 ✨
@@ -143,7 +145,7 @@ Linux 目前只有社群維護的版本 [claude-desktop-debian](https://github.c
 
 * [Tavily MCP Server](https://github.com/tavily-ai/tavily-mcp) - 透過 Tavily api 連網搜尋.
 
-* [Playwright MCP](https://github.com/microsoft/playwright-mcp) - 呼叫瀏覽器.
+* [Playwright MCP](https://github.com/microsoft/playwright-mcp) - 呼叫瀏覽器 [複雜爬蟲掰掰！Playwright MCP + AI 輕鬆實現 PTT 圖片自由！](playwright-mcp-tutorial)
 
 * [Context7 MCP](https://github.com/upstash/context7) - 讓 AI 幫你自動閱讀文檔.
 
