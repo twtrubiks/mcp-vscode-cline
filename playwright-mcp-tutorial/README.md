@@ -67,7 +67,9 @@ flowchart TD
 
 ## 注意事項
 
-如果你要用最新板的 cline, 會有讀不到 terminal 輸出的問題, 請參考 [https://github.com/cline/cline/issues/3445#issuecomment-2901994208](https://github.com/cline/cline/issues/3445#issuecomment-2901994208)
+Cline `3.17.8` 已經全部修正了!!
+
+~~如果你要用最新板的 cline, 會有讀不到 terminal 輸出的問題,~~ 請參考 [https://github.com/cline/cline/issues/3445#issuecomment-2901994208](https://github.com/cline/cline/issues/3445#issuecomment-2901994208)
 
 建議直接把 cline 預設的 terminal 改成 zsh.
 
