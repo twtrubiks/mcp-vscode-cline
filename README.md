@@ -102,11 +102,13 @@ npm -v # 應會印出 "10.9.2"。
 
 ## Claude
 
-Linux 目前只有社群維護的版本 [claude-desktop-debian](https://github.com/aaddrick/claude-desktop-debian)
+這個社群板不維護了
 
-如果你想要用它連結你的遠端 MCP Server,
+~~Linux 目前只有社群維護的版本 [claude-desktop-debian](https://github.com/aaddrick/claude-desktop-debian)~~
 
-請到 `~/.config/Claude/claude_desktop_config.json` 設定
+~~如果你想要用它連結你的遠端 MCP Server,~~
+
+~~請到 `~/.config/Claude/claude_desktop_config.json` 設定~~
 
 ```json
 {
