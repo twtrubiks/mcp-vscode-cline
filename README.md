@@ -4,7 +4,7 @@
 
 * [Youtube Tutorial - 告別手動撈資料 Claude AI MCP 自動查詢 Odoo PostgreSQL](https://youtu.be/EOZ91jD9aL8)
 
-* [Youtube Tutorial - 複雜爬蟲掰掰！Playwright MCP + AI 輕鬆實現 PTT 圖片自由！(等待新增)](xxx)
+* [Youtube Tutorial - 複雜爬蟲掰掰！Playwright MCP + AI 輕鬆實現 PTT 圖片自由！](https://youtu.be/3u7m4XPT8Zs)
 
 ## MCP 到底是什麼？ 🤔
 

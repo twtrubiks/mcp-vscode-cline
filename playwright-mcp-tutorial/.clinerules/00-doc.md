@@ -21,7 +21,7 @@
 
 - 接著將保存下來的網址使用以下指令分次執行, 範例如下
 
-`python app.py "https://xxxxx.jpeg" > my_output.log 2>&1 &`
+`python app.py "https://xxxxx.jpeg"`
 
 - 當你看到輸出結果 成功 之後, 才執行下一個指令, 休息2秒鐘, 分次把圖都下載下來.
 

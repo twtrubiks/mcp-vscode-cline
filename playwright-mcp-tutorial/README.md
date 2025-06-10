@@ -1,6 +1,6 @@
 # Playwright MCP
 
-* [Youtube Tutorial - 複雜爬蟲掰掰！Playwright MCP + AI 輕鬆實現 PTT 圖片自由！(等待新增)](xxx)
+* [Youtube Tutorial - 複雜爬蟲掰掰！Playwright MCP + AI 輕鬆實現 PTT 圖片自由！](https://youtu.be/3u7m4XPT8Zs)
 
 playwright 在 [深入 browser-use 的多模態自動化革命](https://github.com/twtrubiks/browser-use-tutorial) 這邊和大家提過了, 今天單獨來使用它.
 
@@ -67,7 +67,9 @@ flowchart TD
 
 ## 注意事項
 
-如果你要用最新板的 cline, 會有讀不到 terminal 輸出的問題, 請參考 [https://github.com/cline/cline/issues/3445#issuecomment-2901994208](https://github.com/cline/cline/issues/3445#issuecomment-2901994208)
+Cline `3.17.8` 已經全部修正了!!
+
+~~如果你要用最新板的 cline, 會有讀不到 terminal 輸出的問題,~~ 請參考 [https://github.com/cline/cline/issues/3445#issuecomment-2901994208](https://github.com/cline/cline/issues/3445#issuecomment-2901994208)
 
 建議直接把 cline 預設的 terminal 改成 zsh.
 
