@@ -6,6 +6,8 @@
 
 * [Youtube Tutorial - 複雜爬蟲掰掰！Playwright MCP + AI 輕鬆實現 PTT 圖片自由！](https://youtu.be/3u7m4XPT8Zs)
 
+* [Youtube Tutorial - 當 Claude 3.7 擁有了手腳：實測 Augment Code 如何 MCP 操作 odoo 資料庫、瀏覽器](https://youtu.be/dmiQ0zNe-JE)
+
 ## MCP 到底是什麼？ 🤔
 
 MCP 的全名是 Model Context Protocol。簡單說，它就像是 AI 界的 USB Type-C 🔌 ✨
@@ -135,7 +137,7 @@ npm -v # 應會印出 "10.9.2"。
 
 ## MCP Server
 
-* [PostgreSQL](https://github.com/modelcontextprotocol/servers/tree/main/src/postgres) - PostgreSQL MCP
+* [PostgreSQL](https://github.com/crystaldba/postgres-mcp) - Postgres MCP Pro
 
 * [Filesystem MCP Server](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) - 可以讀寫本地文件
 
@@ -214,6 +216,16 @@ VS Code MCP 設定 [Context7 MCP](https://github.com/upstash/context7)
 點擊打勾這個圖示, 右邊的 autoApprove 就會填入對應的事件 type, 之後遇到相同的就會跳過去了
 
 ![img](https://i.imgur.com/IMKyftk.png)
+
+## Augment Code
+
+介紹 [augmentcode](https://www.augmentcode.com/)
+
+14天試用, 300則免費用 (絕對夠你用, 我自己測試使用起來很省)
+
+沒有模型可以選(也不能切換), 就一種而已.
+
+使用模型 Claude 3.7 Sonnet (如果尖峰可能會降成 3.5)
 
 ## Donation
 
